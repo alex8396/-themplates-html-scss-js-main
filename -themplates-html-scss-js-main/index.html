@@ -1,0 +1,494 @@
+        <!doctype html>
+        <html lang="ko">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <title>title</title>
+                <meta
+                    property="og:type"
+                    content="website"
+                />
+                <meta
+                    property="og:title"
+                    content="페이지 제목"
+                />
+                <meta
+                    property="og:description"
+                    content="페이지 설명"
+                />
+                <meta
+                    property="og:image"
+                    content="http://www.mysite.com/article/article1_featured_image.jpg"
+                />
+                <meta
+                    property="og:url"
+                    content="http://www.mysite.com/article/article1.html"
+                />
+                <meta
+                    name="twitter:card"
+                    content="summary"
+                />
+                <meta
+                    name="twitter:title"
+                    content="페이지 제목"
+                />
+                <meta
+                    name="twitter:description"
+                    content="페이지 설명"
+                />
+                <meta
+                    name="twitter:image"
+                    content="http://www.mysite.com/article/article1.html"
+                />
+                <meta
+                    name="twitter:domain"
+                    content="사이트 명"
+                />
+                <link
+                    rel="stylesheet"
+                    as="style"
+                    crossorigin
+                    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="./assets/css/styles.css"
+                />
+                <script>
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+                <script
+                    defer
+                    src="./assets/js/comm.js"
+                ></script>
+                <script
+                    defer
+                    src="./assets/js/main.js"
+                ></script>
+                <style>
+                    .team-match {
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            }
+
+            .team-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            }
+
+            .team-logo img {
+            width: 70%;
+            height: 70%;
+            }
+
+            .team-logo h2 {
+            margin-top: 10px;
+            font-size: 24px;
+            }
+
+            .vs {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 20px;
+            }
+
+            .time {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            }
+                </style>
+            </head>
+            <body>
+                <div id="u-skip">
+                    <a href="#gnb">전체메뉴 바로가기</a>
+                    <a href="#main">본문 바로가기</a>
+                </div>
+                <div id="wrap">
+                    <!-- 60px 스크롤시 .active 추가 -->
+                    <header
+                        id="header"
+                        class="theme-dark"
+                    >
+                        <div class="container">
+                            <h1 id="logo">
+                                <a href="#"><img style="width: 20%; margin: 0 auto"
+                                    src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                    alt=""></a>
+                            </h1>
+                            <nav id="gnb">
+                                <!-- 메뉴 활성화 checked 추가 -->
+                                <input
+                                    type="checkbox"
+                                    name="btnMenu"
+                                    id="btnMenu"
+                                    class="blind"
+                                />
+                                <label
+                                    for="btnMenu"
+                                    class="label-menu"
+                                >
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="blind">전체메뉴 보기</span>
+                                </label>
+                                <div class="menu-wrap">
+                                    <!-- <div class="m-util">
+                                        <a href="#" class="active">KOR</a>
+                                        <a href="#">ENG</a>
+                                    </div> -->
+                                    <div class="top-menu">
+                                        <!-- mobile 메뉴 클릭시 .active 추가 -->
+                                        <dl class="">
+                                            
+                                           
+                                            <dt>
+                                                <a href="#">구단소개</a>
+                                            </dt>
+                                            
+                                            <dd>
+                                                <a href="#">구단역사</a>
+                                                <a href="#">구단브랜드</a>
+                                                <a href="#">홈구장</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            
+                                            <dt>
+                                                <a href="./asd.html">선수단</a>
+                                            </dt>
+                                            
+                                            <dd>
+                                                <a href="#">코칭스태프</a>
+                                                <a href="#">투수</a>
+                                                <a href="#">타자</a>
+                                                <a href="#">군입대</a>
+                                                <a href="#">육성선수</a>
+                                                <a href="#">응원단</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <a href="#">경기일정</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="#">1군 경기일정</a>
+                                                <a href="#">퓨쳐스 경기일정</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <a href="#">기록</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="#">팀기록</a>
+                                                <a href="#">선수기록</a>
+                                                <a href="#">예상달성기록</a>
+                                                <a href="#">역대구단성적</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="util">
+                                <div class="search-area">
+                                    
+                            </div>
+                        </div>
+                    </header>
+                    <div class="swiper slide-intro">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img style="max-width: 100%; height: auto;"
+                                        src="https://www.doosanbears.com/_next/image?url=https%3A%2F%2Fd3uesnxiude69b.cloudfront.net%2Fimgbbs%2F202405%2Fb22f47fb-5864-42b7-ab2e-febd5c585e93.jpg&w=1920&q=75"
+                                        alt="" />
+                                </picture>
+                                <div class="slide-txt">
+                                    <div class="container">
+                                        <span>DOOSAN BEARS</span>
+                                        <strong
+                                            >247 TEAM DOOSAN</strong
+                                        >
+                                        <p>20’24’시즌 ‘V7’을 노리는 두산베어스가 24시간, 7일 내내 뜨겁게 응원을 보내는 팬들과 함께</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img
+                                    style="max-width: 100%; height: auto;"
+                                        src="https://www.doosanbears.com/_next/image?url=https%3A%2F%2Fd3uesnxiude69b.cloudfront.net%2Fimgbbs%2F202405%2F18738be6-8ebf-4ec2-841e-fbfbd20d4e14.JPG&w=1920&q=75"
+                                        alt=""
+                                    />
+                                </picture>
+                                <div class="slide-txt">
+                                    <div class="container">
+                                        <span>DOOSAN BEARS</span>
+                                        <strong>247 TEAM DOOSAN</strong>
+                                        <p>20’24’시즌 ‘V7’을 노리는 두산베어스가 24시간, 7일 내내 뜨겁게 응원을 보내는 팬들과 함께</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img style="max-width: 100%; height: auto;"
+                                        src="https://www.doosanbears.com/_next/image?url=https%3A%2F%2Fd3uesnxiude69b.cloudfront.net%2Fimgbbs%2F202407%2F26159fe2-13ca-4fa0-9845-b5c08edcfe9f.JPG&w=1920&q=75"
+                                        alt=""
+                                    />
+                                </picture>
+                                <div class="slide-txt">
+                                    <div class="container">
+                                        <span>DOOSAN BEARS</span>
+                                        <strong>247 TEAM DOOSAN</strong>
+                                        <p>20’24’시즌 ‘V7’을 노리는 두산베어스가 24시간, 7일 내내 뜨겁게 응원을 보내는 팬들과 함께</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <!-- Pause/Play button -->
+                        <button class="swiper-button-pause">Pause</button>
+                    </div>
+                    <main id="main">
+                        <section class="sec-type1 sec-eft" style="background-color: #131230;">
+                            <div class="container" >
+                                <h2 class="sec-title" style="color: white;">경기 일정</h2>
+                                <div class="sec-content">
+                                    <div class="slide-eft">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;"><h2>07.18</h2></div>
+                                                    <div class="ground"><h3>울산</h3></div>
+                                                    <div class="team-match">
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/UilbCkTb8njvlGXjYtTu9JvXr4be5n-rNrwEFfm4YP5RHo2yRj446dVUDSkkl0P6Ys51rulHKeoIDDfcfYNNCPwgTiAD8neaKwPnEzMB3MeoxIc1sNNK38Efsz5SMSmzRIxz-dBK4bvxaRHcRkf3bA.svg"
+                                                                alt="롯데">
+                                                            <h2>롯데</h2>
+                                                        </div>
+                                                        <div class="vs">VS</div>
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                                alt="두산">
+                                                            <h2>두산</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;"><h2>07.19</h2></div>
+                                                    <div class="ground"><h3>잠실</h3></div>
+                                                    <div class="team-match">
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                                alt="두산">
+                                                            <h2>두산</h2>
+                                                        </div>
+                                                        <div class="vs">VS</div>
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/bh9uWugklUR2TyPhVmaH5DtgExSJbqxCu6a-JWcESEfNQtdQyAtQZer3suLOFtn5a_eP8HzTLRm7Iq6IzyEmkNjYRC6OVZEv5TyxioHeWBudWeM0e_kJifzfOeQMS5FZGJx2GwUq3SzLv93fDdu1Gw.svg"
+                                                                alt="LG">
+                                                            <h2>LG</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide"><div class="date" style="margin: 10%;">
+                                                    <h2>07.20</h2>
+                                                </div>
+                                                <div class="ground">
+                                                    <h3>잠실</h3>
+                                                </div>
+                                                <div class="team-match">
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                            alt="두산">
+                                                        <h2>두산</h2>
+                                                    </div>
+                                                    <div class="vs">VS</div>
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/bh9uWugklUR2TyPhVmaH5DtgExSJbqxCu6a-JWcESEfNQtdQyAtQZer3suLOFtn5a_eP8HzTLRm7Iq6IzyEmkNjYRC6OVZEv5TyxioHeWBudWeM0e_kJifzfOeQMS5FZGJx2GwUq3SzLv93fDdu1Gw.svg"
+                                                            alt="LG">
+                                                        <h2>LG</h2>
+                                                    </div>
+                                                </div></div>
+                                                <div class="swiper-slide"><div class="date" style="margin: 10%;">
+                                                    <h2>07.21</h2>
+                                                </div>
+                                                <div class="ground">
+                                                    <h3>잠실</h3>
+                                                </div>
+                                                <div class="team-match">
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                            alt="두산">
+                                                        <h2>두산</h2>
+                                                    </div>
+                                                    <div class="vs">VS</div>
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/bh9uWugklUR2TyPhVmaH5DtgExSJbqxCu6a-JWcESEfNQtdQyAtQZer3suLOFtn5a_eP8HzTLRm7Iq6IzyEmkNjYRC6OVZEv5TyxioHeWBudWeM0e_kJifzfOeQMS5FZGJx2GwUq3SzLv93fDdu1Gw.svg"
+                                                            alt="LG">
+                                                        <h2>LG</h2>
+                                                    </div>
+                                                </div></div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;">
+                                                    <h2>07.23</h2>
+                                                    </div>
+                                                <div class="ground">
+                                                    <h3>잠실</h3>
+                                                </div>
+                                                <div class="team-match">
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                            alt="두산">
+                                                        <h2>두산</h2>
+                                                    </div>
+                                                    <div class="vs">VS</div>
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/rWFVzBZIzSrCQ8-KOpyhDVXFpkjik8S4zZSJ1bIDpwn9wK1Q_xc555-WjaB6rvn8zSb4374uCc9pDfSumdaff29jD0Hsn45RZZWCNAYvAsDl718dJZ6bZrgf5rdEJ-4tK-c_7M8HmG2PQ-s6OSFciA.svg"
+                                                            alt="LG">
+                                                        <h2>키움</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;">
+                                                        <h2>07.24</h2>
+                                                    </div>
+                                                    <div class="ground">
+                                                        <h3>잠실</h3>
+                                                    </div>
+                                                    <div class="team-match">
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                                alt="두산">
+                                                            <h2>두산</h2>
+                                                        </div>
+                                                        <div class="vs">VS</div>
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/rWFVzBZIzSrCQ8-KOpyhDVXFpkjik8S4zZSJ1bIDpwn9wK1Q_xc555-WjaB6rvn8zSb4374uCc9pDfSumdaff29jD0Hsn45RZZWCNAYvAsDl718dJZ6bZrgf5rdEJ-4tK-c_7M8HmG2PQ-s6OSFciA.svg"
+                                                                alt="LG">
+                                                            <h2>키움</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;">
+                                                        <h2>07.25</h2>
+                                                    </div>
+                                                    <div class="ground">
+                                                        <h3>잠실</h3>
+                                                    </div>
+                                                    <div class="team-match">
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                                alt="두산">
+                                                            <h2>두산</h2>
+                                                        </div>
+                                                        <div class="vs">VS</div>
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/rWFVzBZIzSrCQ8-KOpyhDVXFpkjik8S4zZSJ1bIDpwn9wK1Q_xc555-WjaB6rvn8zSb4374uCc9pDfSumdaff29jD0Hsn45RZZWCNAYvAsDl718dJZ6bZrgf5rdEJ-4tK-c_7M8HmG2PQ-s6OSFciA.svg"
+                                                                alt="LG">
+                                                            <h2>키움</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;">
+                                                    <h2>07.26</h2>
+                                                </div>
+                                                <div class="ground">
+                                                    <h3>문학</h3>
+                                                </div>
+                                                <div class="team-match">
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/wWb1Uy5mpobz-gnel9lw8LFU2aD3ep4xoh2OAgQnii0iHsRFUkpb3nrLyDlFzYp-Q8axRhw4AM0UF16ePA6DriyreQF9IvPKQorPPENBNBFfBT7WBmLYHp0dFbYm9xO2WIaXfPmdadFa-kZTo01FFA.svg"
+                                                            alt="LG">
+                                                        <h2>SSG</h2>
+                                                    </div>
+                                                    <div class="vs">VS</div>
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                            alt="두산">
+                                                        <h2>두산</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="swiper-slide">
+                                                    <div class="date" style="margin: 10%;">
+                                                        <h2>07.27</h2>
+                                                    </div>
+                                                    <div class="ground">
+                                                        <h3>문학</h3>
+                                                    </div>
+                                                    <div class="team-match">
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/wWb1Uy5mpobz-gnel9lw8LFU2aD3ep4xoh2OAgQnii0iHsRFUkpb3nrLyDlFzYp-Q8axRhw4AM0UF16ePA6DriyreQF9IvPKQorPPENBNBFfBT7WBmLYHp0dFbYm9xO2WIaXfPmdadFa-kZTo01FFA.svg"
+                                                                alt="LG">
+                                                            <h2>SSG</h2>
+                                                        </div>
+                                                        <div class="vs">VS</div>
+                                                        <div class="team-logo">
+                                                            <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                                alt="두산">
+                                                            <h2>두산</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <div class="swiper-slide">
+                                                <div class="date" style="margin: 10%;">
+                                                    <h2>07.28</h2>
+                                                </div>
+                                                <div class="ground">
+                                                    <h3>문학</h3>
+                                                </div>
+                                                <div class="team-match">
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/wWb1Uy5mpobz-gnel9lw8LFU2aD3ep4xoh2OAgQnii0iHsRFUkpb3nrLyDlFzYp-Q8axRhw4AM0UF16ePA6DriyreQF9IvPKQorPPENBNBFfBT7WBmLYHp0dFbYm9xO2WIaXfPmdadFa-kZTo01FFA.svg"
+                                                            alt="LG">
+                                                        <h2>SSG</h2>
+                                                    </div>
+                                                    <div class="vs">VS</div>
+                                                    <div class="team-logo">
+                                                        <img src="https://i.namu.wiki/i/qRnyMvJ69TyPUcoilLWqAp6vtqRXr3-BT0QM3lsLnIPzawhmq7KDj4tRp6yoD9LWzGN4o59rYpSbCB2hWd54SjcCy1Fek2t76RxzbEPbe1mhYlH0wMYMIiQWGrqlONdckRSmxldZjNjxYoWHuUaiaQ.svg"
+                                                            alt="두산">
+                                                        <h2>두산</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="swiper-pagination"></div> -->
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </main>
+                    <footer id="footer">
+                    </footer>
+                </div>
+            </body>
+        </html>
